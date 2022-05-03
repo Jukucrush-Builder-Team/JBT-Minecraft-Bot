@@ -1,0 +1,24 @@
+{
+  "name": "jbt-minecraft-bot",
+  "version": "0.0.1",
+  "description": "This is a repository for all JBT Team bot code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jukucrush-Builder-Team/JBT-Minecraft-Bot.git"
+  },
+  "keywords": [],
+  "author": "Pasitha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jukucrush-Builder-Team/JBT-Minecraft-Bot/issues"
+  },
+  "homepage": "https://github.com/Jukucrush-Builder-Team/JBT-Minecraft-Bot#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "mineflayer": "^4.3.0"
+  }
+}
