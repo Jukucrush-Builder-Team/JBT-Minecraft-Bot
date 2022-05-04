@@ -30,9 +30,13 @@ bot.on('chat', async (username, message) => {
     const args = messageArray.slice(1);
 
     switch (cmd) {
+        case 'playerhead':
+            bot.chat(`/give ${username} minecraft:player_head{SkullOwner:${args[0]}}`);
+        break;
         case 'randomteam':
+            bot.chat('/setblock 241 63 -139 minecraft:redstone_block');
             bot.chat('/clear @a minecraft:tnt');
-            function shuffle(array) {
+            const shuffle = (array) => {
                 let currentIndex = array.length, randomIndex;
 
                 // While there remain elements to shuffle...
@@ -91,7 +95,6 @@ bot.on('chat', async (username, message) => {
             let shuffledPlayer = shuffle(player);
 
             for (let i in shuffledPlayer) {
-                console.log(`${i} ${shuffledPlayer[i]}`);
                 switch (i % 4) {
                     case 0:
                         bot.chat(`/team join RED_TEAM ${player[i]}`);
@@ -213,11 +216,11 @@ const client = new Client({
 
 client.on('ready', () => {
     console.log('discord: ready!');
-})
+});
 
 client.on('messageCreate', (message) => {
     
-})
+});
 
-client.login(require('./config.json').discord.token)
+client.login(require('./config.json').discord.token);
 
